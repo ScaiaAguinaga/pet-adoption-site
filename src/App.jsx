@@ -1,9 +1,23 @@
-import "./styles.css";
+import './styles.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// pages
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import Test from "./pages/Test";
 
 function App() {
   return (
     <>
-      <div className="text-3xl">Testing</div>
+      <BrowserRouter>
+        {/* Navbar */}
+        <nav className="flex bg-blue-400 h-14 items-center justify-center">Navbar Placeholder</nav>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/Test" element={<Test />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
