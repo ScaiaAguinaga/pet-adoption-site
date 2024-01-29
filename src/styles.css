@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* For - */
+h1 {
+    font-size: 24px;
+}
+
+/* For - */
+h2 {
+    font-size: 24px;
+}
+
+/* For - */
+h3 {
+    font-size: 24px;
+}
+
+/* For - */
+p {
+    font-size: 24px;
+}

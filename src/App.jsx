@@ -1,4 +1,4 @@
-import './styles.css'
+import "./styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
@@ -11,7 +11,9 @@ function App() {
     <>
       <BrowserRouter>
         {/* Navbar */}
-        <nav className="flex bg-blue-400 h-14 items-center justify-center">Navbar Placeholder</nav>
+        <nav className="flex bg-cerulean h-14 items-center justify-center">
+          Navbar Placeholder
+        </nav>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Test" element={<Test />}></Route>
