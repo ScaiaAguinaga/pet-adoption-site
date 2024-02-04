@@ -15,9 +15,11 @@ function App() {
           Navbar Placeholder
         </nav>
         <Routes>
+          {/* put div here and add margin top for navbar */}
           <Route path="/" element={<Home />}></Route>
           <Route path="/Test" element={<Test />}></Route>
           <Route path="*" element={<NotFound />}></Route>
+          {/* div encapsulates here */}
         </Routes>
       </BrowserRouter>
     </>
