@@ -11,7 +11,7 @@ const HeroButton = ({ to, name }) => {
   );
 };
 
-// Add PropTypes validation
+// PropTypes validation
 HeroButton.propTypes = {
   to: PropTypes.string.isRequired, // 'to' prop is expected to be a string and is required
   name: PropTypes.string.isRequired, // 'page' prop is expected to be a string and is required
