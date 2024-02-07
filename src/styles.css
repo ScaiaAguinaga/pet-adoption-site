@@ -4,26 +4,27 @@
 
 /* For - */
 h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 /* For - */
 h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 /* For - */
 h3 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 /* For - */
 p {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  /* object-position: center; */
+}

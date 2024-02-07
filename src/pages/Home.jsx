@@ -6,9 +6,8 @@ import "../styles.css";
 import Sample1 from "../assets/images/Sample1.jpg";
 import Sample2 from "../assets/images/Sample2.jpg";
 import Sample3 from "../assets/images/Sample3.jpg";
-import Sample4 from "../assets/images/Sample4.jpg";
 
-const slides = [Sample1, Sample2, Sample3, Sample4];
+const slides = [Sample1, Sample2, Sample3];
 
 const Home = () => {
   return (
@@ -28,28 +27,28 @@ const Home = () => {
           <HeroButton to="/Test" name="Contact" />
         </div>
       </section>
-      {/* New Pals */}
-      <h2 className="flex justify-center">New Pals</h2>
-      {/* New Pals carousel */}
+
+      {/* New Pals section*/}
       <section>
-        <div className="m-auto flex h-[450px] w-[850px] rounded-[20px] border bg-blue-300 p-4 ">
-          <div className="grid h-full w-full grid-cols-3 gap-6 rounded-[20px] bg-red-400">
-            <div className="flex items-center justify-center overflow-hidden rounded-[20px] bg-green-400">
-              <Carousel autoSlide={true}>
-                {slides.map((slide, index) => (
-                  <img key={index} src={slide} />
-                ))}
-              </Carousel>
-            </div>
-            <div className="col-span-2 justify-center bg-purple-500 py-5">
-              <h3 className="border text-center">Name</h3>
-              <p className="border">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-                error ducimus enim repellendus suscipit minus omnis iure officia
-                eum impedit illum, tenetur nisi similique accusamus quia ipsam
-                quam soluta voluptas!
-              </p>
-            </div>
+        <h2 className="flex justify-center">New Pals</h2>
+        <div className="m-auto flex w-1/3 min-w-[600px] max-w-[900px] rounded-[20px] bg-cerulean p-4">
+          {/* Pet picture carousel */}
+          <div className="w-2/5 overflow-hidden rounded-[20px]">
+            <Carousel autoSlide={true}>
+              {slides.map((slide, index) => (
+                <img key={index} src={slide} />
+              ))}
+            </Carousel>
+          </div>
+          {/* Pet name and description */}
+          <div className="w-3/5 p-8">
+            <h3 className="border text-center">Name</h3>
+            <p className="border">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id error
+              ducimus enim repellendus suscipit minus omnis iure officia eum
+              impedit illum, tenetur nisi similique accusamus quia ipsam quam
+              soluta voluptas!
+            </p>
           </div>
         </div>
       </section>

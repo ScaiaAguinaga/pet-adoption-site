@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "react-feather";
 const Carousel = ({
   children: slides,
   autoSlide = false,
-  autoSlideInterval = 2000,
+  autoSlideInterval = 3000,
 }) => {
   const [curr, setCurr] = useState(0);
 
@@ -34,13 +34,13 @@ const Carousel = ({
           onClick={prev}
           className="rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite"
         >
-          <ChevronLeft className="size-10" />
+          <ChevronLeft className="size-8" />
         </button>
         <button
           onClick={next}
           className="rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite"
         >
-          <ChevronRight className="size-10" />
+          <ChevronRight className="size-8" />
         </button>
       </div>
 
