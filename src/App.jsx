@@ -11,7 +11,7 @@ function App() {
     <>
       <BrowserRouter>
         {/* Navbar */}
-        <nav className="flex bg-cerulean h-14 items-center justify-center">
+        <nav className="flex h-14 items-center justify-center bg-cerulean">
           Navbar Placeholder
         </nav>
         <Routes>
@@ -21,6 +21,9 @@ function App() {
           <Route path="*" element={<NotFound />}></Route>
           {/* div encapsulates here */}
         </Routes>
+        <footer className="mt-40 flex h-[100px] items-center justify-center bg-cerulean">
+          Footer Placeholder
+        </footer>
       </BrowserRouter>
     </>
   );

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { ChevronLeft, ChevronRight } from "react-feather";
+import PropTypes from "prop-types";
 
 const Carousel = ({
   children: slides,
@@ -15,6 +15,10 @@ const Carousel = ({
   const next = () =>
     setCurr((curr) => (curr == slides.length - 1 ? 0 : curr + 1));
 
+  const goTo = (i) => {
+    setCurr(i);
+  };
+
   useEffect(() => {
     if (!autoSlide) return;
     const SlideInterval = setInterval(next, autoSlideInterval);
@@ -22,9 +26,9 @@ const Carousel = ({
   });
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative h-full">
       <div
-        className="flex transition-transform duration-500 ease-out"
+        className="flex h-full transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides}
@@ -49,6 +53,7 @@ const Carousel = ({
           {slides.map((_, i) => (
             <div
               key={i} // Added key prop to each div element
+              onClick={() => goTo(i)}
               className={`h-3 w-3 rounded-full bg-offwhite transition-all ${curr === i ? "p-2" : "bg-opacity-50"}`}
             />
           ))}
@@ -62,7 +67,7 @@ export default Carousel;
 
 // PropTypes validation
 Carousel.propTypes = {
-  children: PropTypes.array.isRequired, // 'slides' prop is expected to be an array and is required
+  children: PropTypes.array.isRequired,
   autoSlide: PropTypes.bool.isRequired,
   autoSlideInterval: PropTypes.number.isRequired,
 };
