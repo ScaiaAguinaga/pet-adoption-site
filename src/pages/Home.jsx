@@ -6,10 +6,13 @@ import "../styles.css";
 import Sample1 from "../assets/images/Sample1.jpg";
 import Sample2 from "../assets/images/Sample2.jpg";
 import Sample3 from "../assets/images/Sample3.jpg";
+import Checklist from "../assets/images/Checklist.png";
+import DogBath from "../assets/images/DogBath.png";
+import FAQ from "../assets/images/Conversation.png";
 
-const slides = [Sample1, Sample2, Sample3];
-const neo = "Neo";
-const meow = "meowmeowmeowmeowmeowmeow meowmeowmeowmeowmeowmeow";
+const petSlides = [Sample1, Sample2, Sample3];
+const petName = "Pet Name";
+const petDesc = "Description of Pet";
 
 const Home = () => {
   return (
@@ -34,9 +37,38 @@ const Home = () => {
       </section>
 
       {/* New Pals section*/}
-      <section>
-        <h2 className="flex justify-center">New Pals</h2>
-        <NewPalsCarousel slides={slides} petName={neo} petDescription={meow} />
+      <section className="mb-36">
+        <h2 className="mb-4 flex justify-center">New Pals</h2>
+        <NewPalsCarousel slides={petSlides} petName={petName} petDescription={petDesc} />
+      </section>
+
+      {/* Home Page Nav Buttons */}
+      <section className="mb-36 flex justify-center bg-cerulean">
+        <div className="grid grid-cols-3 gap-40 py-20">
+          <button className="h-[150px] w-[150px] text-center text-white">
+            <img src={Checklist} />
+            <div>Adoption Checklist</div>
+          </button>
+          <button className="h-[150px] w-[150px] text-center text-white">
+            <img src={DogBath} />
+            <div>Pet Tips</div>
+          </button>
+          <button className="h-[150px] w-[150px] text-center text-white">
+            <img src={FAQ} />
+            <div>FAQ</div>
+          </button>
+        </div>
+      </section>
+
+      {/* Mission Statement */}
+      <section className="justify-center text-center">
+        <div>Mission Statement</div>
+        <div>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
+          aut? Non tenetur voluptate corporis consequatur ut ipsum incidunt quia
+          vero voluptatibus? Sed facilis ad doloribus ipsum ut cumque,
+          necessitatibus dolorem?
+        </div>
       </section>
     </>
   );
