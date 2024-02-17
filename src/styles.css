@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* For - */
+/* For Headings */
 h1 {
-  font-size: 24px;
+  font-size: 36px;
 }
 
-/* For - */
+/* For Sub-Headings */
 h2 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 /* For - */
@@ -17,7 +17,6 @@ h3 {
   font-size: 24px;
 }
 
-/* For - */
 p {
-  font-size: 24px;
+  font-size: 20px;
 }

@@ -14,7 +14,7 @@ const NewPalsCarousel = ({ slides, petName, petDescription }) => {
       </div>
       {/* Pet name and description */}
       <div className="h-full w-2/3 p-8">
-        <h3 className="text-center">{petName}</h3>
+        <h2 className="text-center">{petName}</h2>
         <p className="overflow-hidden"> {petDescription} </p>
       </div>
     </div>
