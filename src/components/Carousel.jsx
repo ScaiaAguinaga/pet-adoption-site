@@ -6,6 +6,7 @@ const Carousel = ({
   children: slides,
   autoSlide = false,
   autoSlideInterval = 3000,
+  className,
 }) => {
   const [curr, setCurr] = useState(0);
 
@@ -26,7 +27,7 @@ const Carousel = ({
   });
 
   return (
-    <div className="relative h-full">
+    <div className={`${className} relative h-full`}>
       <div
         className="flex h-full transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -70,4 +71,5 @@ Carousel.propTypes = {
   children: PropTypes.array.isRequired,
   autoSlide: PropTypes.bool.isRequired,
   autoSlideInterval: PropTypes.number.isRequired,
+  className: PropTypes.string.isRequired,
 };

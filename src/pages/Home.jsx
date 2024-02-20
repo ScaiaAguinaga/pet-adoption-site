@@ -1,6 +1,5 @@
 import HeroButton from "../components/HeroButton";
 import ResourceButton from "../components/ResourceButton";
-import NewPalsCarousel from "../components/NewPalsCarousel";
 import "../styles.css";
 
 // temp imports
@@ -10,10 +9,9 @@ import Sample3 from "../assets/images/Sample3.jpg";
 import Checklist from "../assets/images/Checklist.png";
 import DogBath from "../assets/images/DogBath.png";
 import Conversation from "../assets/images/Conversation.png";
+import NewPalsCarousel from "../components/NewPalsCarousel";
 
 const petSlides = [Sample1, Sample2, Sample3];
-const petName = "Pet Name";
-const petDesc = "Description of Pet";
 
 const Home = () => {
   return (
@@ -40,11 +38,11 @@ const Home = () => {
       {/* New Arrivals section*/}
       <section className="mb-40">
         <h1 className="mb-4 flex justify-center">New Arrivals!</h1>
-        <NewPalsCarousel
-          slides={petSlides}
-          petName={petName}
-          petDescription={petDesc}
-        />
+        <div className="m-auto grid w-[1000px] grid-cols-3 gap-5">
+          <NewPalsCarousel slides={petSlides} petName={"Neo"} />
+          <NewPalsCarousel slides={petSlides} petName={"Neo"} />
+          <NewPalsCarousel slides={petSlides} petName={"Neo"} />
+        </div>
       </section>
 
       {/* Adopting help section */}
