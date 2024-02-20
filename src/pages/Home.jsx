@@ -1,6 +1,12 @@
+import "../styles.css";
 import HeroButton from "../components/HeroButton";
 import ResourceButton from "../components/ResourceButton";
-import "../styles.css";
+import NewPalsCarousel from "../components/NewPalsCarousel";
+
+// asset imports
+import Checklist from "../assets/images/Checklist.png";
+import DogBath from "../assets/images/DogBath.png";
+import Conversation from "../assets/images/Conversation.png";
 
 // temp imports
 import Neo1 from "../assets/images/Neo1.jpg";
@@ -12,11 +18,8 @@ import Coco3 from "../assets/images/Coco2.jpg";
 import Tiger1 from "../assets/images/Tiger1.jpg";
 import Tiger2 from "../assets/images/Tiger2.jpg";
 import Tiger3 from "../assets/images/Tiger2.jpg";
-import Checklist from "../assets/images/Checklist.png";
-import DogBath from "../assets/images/DogBath.png";
-import Conversation from "../assets/images/Conversation.png";
-import NewPalsCarousel from "../components/NewPalsCarousel";
 
+// image arrays for new pals section
 const SlidesNeo = [Neo1, Neo2, Neo3];
 const SlidesCoco = [Coco1, Coco2, Coco3];
 const SlidesTiger = [Tiger1, Tiger2, Tiger3];

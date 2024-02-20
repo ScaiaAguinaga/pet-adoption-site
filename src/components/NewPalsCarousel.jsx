@@ -5,7 +5,7 @@ const NewPalsCarousel = ({ slides, petName }) => {
   return (
     <div>
       <div className="overflow-hidden rounded-t-[20px]">
-        <Carousel autoSlide={true}>
+        <Carousel autoSlide={true} hideButtons={"hidden"}>
           {slides.map((slide, index) => (
             <img key={index} src={slide} className="w-full object-cover aspect-9/10" />
           ))}

@@ -6,7 +6,7 @@ const Carousel = ({
   children: slides,
   autoSlide = false,
   autoSlideInterval = 3000,
-  className,
+  hideButtons,
 }) => {
   const [curr, setCurr] = useState(0);
 
@@ -27,7 +27,7 @@ const Carousel = ({
   });
 
   return (
-    <div className={`${className} relative h-full`}>
+    <div className={`relative h-full`}>
       <div
         className="flex h-full transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -37,13 +37,13 @@ const Carousel = ({
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <button
           onClick={prev}
-          className="rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite"
+          className={`${hideButtons} rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite`}
         >
           <ChevronLeft className="size-8" />
         </button>
         <button
           onClick={next}
-          className="rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite"
+          className={`${hideButtons} rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite`}
         >
           <ChevronRight className="size-8" />
         </button>
@@ -71,5 +71,5 @@ Carousel.propTypes = {
   children: PropTypes.array.isRequired,
   autoSlide: PropTypes.bool.isRequired,
   autoSlideInterval: PropTypes.number.isRequired,
-  className: PropTypes.string.isRequired,
+  hideButtons: PropTypes.string.isRequired,
 };
