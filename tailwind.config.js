@@ -12,6 +12,9 @@ export default {
       backgroundImage: {
         "hero-image": "url('/src/assets/images/HeroSampleImage.jpg')",
       },
+      aspectRatio: {
+        "9/10": "9 / 10",
+      },
       colors: {
         cerulean: "#007BA7",
         offwhite: "#FAF9F6",

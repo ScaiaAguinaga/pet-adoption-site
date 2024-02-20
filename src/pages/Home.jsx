@@ -3,15 +3,23 @@ import ResourceButton from "../components/ResourceButton";
 import "../styles.css";
 
 // temp imports
-import Sample1 from "../assets/images/Sample1.jpg";
-import Sample2 from "../assets/images/Sample2.jpg";
-import Sample3 from "../assets/images/Sample3.jpg";
+import Neo1 from "../assets/images/Neo1.jpg";
+import Neo2 from "../assets/images/Neo2.jpg";
+import Neo3 from "../assets/images/Neo3.jpg";
+import Coco1 from "../assets/images/Coco1.jpg";
+import Coco2 from "../assets/images/Coco2.jpg";
+import Coco3 from "../assets/images/Coco2.jpg";
+import Tiger1 from "../assets/images/Tiger1.jpg";
+import Tiger2 from "../assets/images/Tiger2.jpg";
+import Tiger3 from "../assets/images/Tiger2.jpg";
 import Checklist from "../assets/images/Checklist.png";
 import DogBath from "../assets/images/DogBath.png";
 import Conversation from "../assets/images/Conversation.png";
 import NewPalsCarousel from "../components/NewPalsCarousel";
 
-const petSlides = [Sample1, Sample2, Sample3];
+const SlidesNeo = [Neo1, Neo2, Neo3];
+const SlidesCoco = [Coco1, Coco2, Coco3];
+const SlidesTiger = [Tiger1, Tiger2, Tiger3];
 
 const Home = () => {
   return (
@@ -39,9 +47,9 @@ const Home = () => {
       <section className="mb-40">
         <h1 className="mb-4 flex justify-center">New Arrivals!</h1>
         <div className="m-auto grid w-[1000px] grid-cols-3 gap-5">
-          <NewPalsCarousel slides={petSlides} petName={"Neo"} />
-          <NewPalsCarousel slides={petSlides} petName={"Neo"} />
-          <NewPalsCarousel slides={petSlides} petName={"Neo"} />
+          <NewPalsCarousel slides={SlidesNeo} petName={"Neo"} />
+          <NewPalsCarousel slides={SlidesCoco} petName={"Coco"} />
+          <NewPalsCarousel slides={SlidesTiger} petName={"Tiger"} />
         </div>
       </section>
 
