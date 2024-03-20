@@ -14,7 +14,7 @@ import Neo2 from "../assets/images/Neo2.jpg";
 import Neo3 from "../assets/images/Neo3.jpg";
 import Coco1 from "../assets/images/Coco1.jpg";
 import Coco2 from "../assets/images/Coco2.jpg";
-import Coco3 from "../assets/images/Coco2.jpg";
+import Coco3 from "../assets/images/Coco3.jpg";
 import Tiger1 from "../assets/images/Tiger1.jpg";
 import Tiger2 from "../assets/images/Tiger2.jpg";
 import Tiger3 from "../assets/images/Tiger2.jpg";
