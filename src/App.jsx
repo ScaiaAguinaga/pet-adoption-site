@@ -11,7 +11,7 @@ function App() {
     <>
       <BrowserRouter>
         {/* Navbar */}
-        <nav className="flex h-14 items-center justify-center bg-cerulean">
+        <nav className="flex h-14 items-center justify-center bg-cerulean sticky top-0 z-10">
           Navbar Placeholder
         </nav>
         <Routes>

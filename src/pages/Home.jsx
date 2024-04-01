@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="mb-40">
+      <section className="mb-28">
         {/* Background and slogan */}
         <div className="flex h-[440px] flex-col items-center justify-center gap-10 bg-hero-image bg-cover bg-center">
           <input
@@ -57,16 +57,12 @@ const Home = () => {
       </section>
 
       {/* Adopting help section */}
-      <section className="mb-40 flex justify-center bg-cerulean text-white">
-        <div className="grid grid-cols-3 gap-x-40 gap-y-10 pb-32 pt-20">
+      <section className="flex justify-center bg-cerulean text-white py-20 mb-40">
+        <div className="grid grid-cols-3 gap-x-40 gap-y-10">
           <h1 className="col-span-3 text-center">
             Check out our adoption resources!
           </h1>
-          <ResourceButton
-            to="/Test"
-            image={Checklist}
-            name="Adoption Checklist"
-          />
+          <ResourceButton to="/Test" image={Checklist} name="Checklist" />
           <ResourceButton to="/Test" image={DogBath} name="Pet Tips" />{" "}
           <ResourceButton to="/Test" image={Conversation} name="FAQ" />
         </div>
