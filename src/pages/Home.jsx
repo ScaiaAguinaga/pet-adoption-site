@@ -62,9 +62,9 @@ const Home = () => {
           <h1 className="col-span-3 text-center">
             Check out our adoption resources!
           </h1>
-          <ResourceButton to="/Test" image={Checklist} name="Checklist" />
-          <ResourceButton to="/Test" image={DogBath} name="Pet Tips" />{" "}
-          <ResourceButton to="/Test" image={Conversation} name="FAQ" />
+          <ResourceButton to="/Resources" image={Checklist} name="Checklist" />
+          <ResourceButton to="/Resources" image={DogBath} name="Pet Tips" />
+          <ResourceButton to="/Resources" image={Conversation} name="FAQ" />
         </div>
       </section>
 

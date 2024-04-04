@@ -5,21 +5,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
+import Resources from "./pages/Resources";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        {/* Navbar */}
-        <nav className="flex h-14 items-center justify-center bg-cerulean sticky top-0 z-10">
+        <ScrollToTop />
+        <nav className="sticky top-0 z-10 flex h-14 items-center justify-center bg-cerulean">
           Navbar Placeholder
         </nav>
         <Routes>
-          {/* put div here and add margin top for navbar */}
           <Route path="/" element={<Home />}></Route>
           <Route path="/Test" element={<Test />}></Route>
+          <Route path="/Resources" element={<Resources />}></Route>
           <Route path="*" element={<NotFound />}></Route>
-          {/* div encapsulates here */}
         </Routes>
         <footer className="mt-40 flex h-[100px] items-center justify-center bg-cerulean">
           Footer Placeholder
