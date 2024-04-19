@@ -57,7 +57,7 @@ const Home = () => {
       </section>
 
       {/* Adopting help section */}
-      <section className="flex justify-center bg-cerulean text-white py-20 mb-40">
+      <section className="mb-40 flex justify-center bg-cerulean py-20 text-white">
         <div className="grid grid-cols-3 gap-x-40 gap-y-10">
           <h1 className="col-span-3 text-center">
             Check out our adoption resources!
