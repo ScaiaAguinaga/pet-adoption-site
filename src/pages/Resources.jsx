@@ -1,4 +1,5 @@
 import "../styles.css";
+import ChecklistItem from "../components/ChecklistItem";
 import Dropdown from "../components/Dropdown";
 
 const Resources = () => {
@@ -6,18 +7,18 @@ const Resources = () => {
     <div className="m-auto w-1/2">
       <h1>Resources</h1>
       <div className="rounded-[20px] border-4 border-cerulean p-6 pt-3">
-        <section>
-          <h1>Checklist</h1>
+        <section className="mb-5">
+          <h1 className="font-medium">Checklist</h1>
           <div>
-            <h3>item 1</h3>
-            <h3>item 2</h3>
-            <h3>item 3</h3>
-            <h3>item 4</h3>
-            <h3>item 5</h3>
+            <ChecklistItem itemName="To-Do 1" />
+            <ChecklistItem itemName="To-Do 2" />
+            <ChecklistItem itemName="To-Do 3" />
+            <ChecklistItem itemName="To-Do 4" />
+            <ChecklistItem itemName="To-Do 5" />
           </div>
         </section>
-        <section>
-          <h1>Pet Tips</h1>
+        <section className="mb-5">
+          <h1 className="font-medium">Pet Tips</h1>
           <div>
             <h3>Tip 1</h3>
             <p>You should follow tip 1!</p>
@@ -28,8 +29,8 @@ const Resources = () => {
           </div>
         </section>
         <section>
-          <h1>FAQ</h1>
-          <div>
+          <h1 className="font-medium">FAQ</h1>
+          <div className="grid grid-cols-1 gap-3">
             <Dropdown question="Question 1" answer="Answer 1" />
             <Dropdown question="Question 2" answer="Answer 2" />
             <Dropdown question="Question 3" answer="Answer 3" />

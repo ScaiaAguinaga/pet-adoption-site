@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "react-feather";
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const Carousel = ({
   children: slides,
@@ -38,13 +39,13 @@ const Carousel = ({
           onClick={prev}
           className={`${hideButtons} rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite`}
         >
-          <ChevronLeft className="size-8" />
+          <FaChevronLeft/>
         </button>
         <button
           onClick={next}
           className={`${hideButtons} rounded-full bg-offwhite/80 p-1 text-gray-800 shadow hover:bg-offwhite`}
         >
-          <ChevronRight className="size-8" />
+          <FaChevronRight/>
         </button>
       </div>
 
