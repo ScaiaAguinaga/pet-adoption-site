@@ -21,9 +21,3 @@ const NewPalsCarousel = ({ slides, petName }) => {
 };
 
 export default NewPalsCarousel;
-
-// PropTypes validation
-NewPalsCarousel.propTypes = {
-  petName: PropTypes.array.isRequired,
-  slides: PropTypes.string.isRequired,
-};

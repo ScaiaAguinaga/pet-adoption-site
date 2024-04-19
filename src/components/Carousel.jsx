@@ -65,11 +65,3 @@ const Carousel = ({
 };
 
 export default Carousel;
-
-// PropTypes validation
-Carousel.propTypes = {
-  children: PropTypes.array.isRequired,
-  autoSlide: PropTypes.bool.isRequired,
-  autoSlideInterval: PropTypes.number.isRequired,
-  hideButtons: PropTypes.string.isRequired,
-};

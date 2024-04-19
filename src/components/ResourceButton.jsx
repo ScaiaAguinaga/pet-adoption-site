@@ -12,11 +12,4 @@ const ResourceButton = ({ to, image, name }) => {
   );
 };
 
-// PropTypes validation
-ResourceButton.propTypes = {
-  to: PropTypes.string.isRequired, // 'to' prop is expected to be a string and is required
-  image: PropTypes.string.isRequired, // 'image' prop is expected to be a string and is required
-  name: PropTypes.string.isRequired, // 'page' prop is expected to be a string and is required
-};
-
 export default ResourceButton;
