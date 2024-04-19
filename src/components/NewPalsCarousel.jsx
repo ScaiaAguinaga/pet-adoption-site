@@ -1,6 +1,5 @@
 import Carousel from "./Carousel";
-import PropTypes from "prop-types";
-
+ 
 const NewPalsCarousel = ({ slides, petName }) => {
   return (
     <div>

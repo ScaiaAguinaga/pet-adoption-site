@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import PropTypes from "prop-types";
 
 const Carousel = ({
   children: slides,
