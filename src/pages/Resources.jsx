@@ -5,7 +5,13 @@ import ChecklistItem from "../components/ChecklistItem";
 import Dropdown from "../components/Dropdown";
 
 const Resources = () => {
+  // Contains currently selected pet type id
+  // Defaultly holds id of 1
   const [selected, setSelected] = useState(1);
+
+  // Contains currently selected pet info
+  const selectedPetType = petTypes.find((animal) => animal.id === selected);
+
   return (
     <div className="m-auto w-1/2">
       <h1 className="flex justify-center py-5">Resources</h1>
@@ -29,38 +35,37 @@ const Resources = () => {
         ))}
       </div>
 
+      {/* Body of selected pet information */}
       <div className="rounded-b-[20px] rounded-r-[20px] border-4 border-cerulean p-6 pt-3">
+        {/* Render Checklist */}
         <section className="mb-5">
           <h1 className="font-medium">Checklist</h1>
-          <div>
-            {/* Render checklist for selected pet type */}
-            {/* Map todo array using index of array as unique identifier for array items */}
-            {petTypes
-              .find((animal) => animal.id === selected)
-              ?.todos.map((todo, index) => (
-                <ChecklistItem key={index} itemName={todo} />
-              ))}
-          </div>
+          {selectedPetType?.todos.map((todo, index) => (
+            <ChecklistItem key={index} itemName={todo} />
+          ))}
         </section>
-        <section className="mb-5">
+        {/* Render Tips */}
+        <section>
           <h1 className="font-medium">Pet Tips</h1>
-          <div>
-            <h3>Tip 1</h3>
-            <p>You should follow tip 1!</p>
-            <h3>Tip 2</h3>
-            <p>You should follow tip 2!</p>
-            <h3>Tip 3</h3>
-            <p>You should follow tip 3!</p>
-          </div>
+          {selectedPetType?.tips.map((tip, index) => (
+            <div key={index}>
+              <h3>Tip {index + 1}</h3>
+              <p>{tip}</p>
+            </div>
+          ))}
         </section>
+        {/* Render FAQ */}
+        {/* Matches answer to question by using same index num */}
         <section>
           <h1 className="pb-3 font-medium">FAQ</h1>
           <div className="grid grid-cols-1 gap-3">
-            <Dropdown question="Question 1" answer="Answer 1" />
-            <Dropdown question="Question 2" answer="Answer 2" />
-            <Dropdown question="Question 3" answer="Answer 3" />
-            <Dropdown question="Question 4" answer="Answer 4" />
-            <Dropdown question="Question 5" answer="Answer 5" />
+            {selectedPetType.questions.map((question, index) => (
+              <Dropdown
+                key={index}
+                question={question}
+                answer={selectedPetType.answers[index]}
+              />
+            ))}
           </div>
         </section>
       </div>

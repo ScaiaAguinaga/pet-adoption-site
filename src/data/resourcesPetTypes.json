@@ -5,36 +5,24 @@
       "type": "Dog",
       "todos": ["dogtodo1", "dogtodo2", "dogtodo3"],
       "tips": ["dogtip1", "dogtip2", "dogtip3"],
-      "question1": "dQuestion1",
-      "answer1": "answer1",
-      "question2": "Question2",
-      "answer2": "answer2",
-      "question3": "Question3",
-      "answer3": "answer3"
+      "questions": ["question1", "question2", "question3"],
+      "answers": ["danswer1", "danswer2", "danswer3"]
     },
     {
       "id": 2,
       "type": "Cat",
       "todos": ["cattodo1", "cattodo2", "cattodo3"],
       "tips": ["cattip1", "cattip2", "cattip3"],
-      "question1": "cQuestion1",
-      "answer1": "answer1",
-      "question2": "Question2",
-      "answer2": "answer2",
-      "question3": "Question3",
-      "answer3": "answer3"
+      "questions": ["question1", "question2", "question3"],
+      "answers": ["canswer1", "canswer2", "canswer3"]
     },
     {
       "id": 3,
       "type": "Other",
       "todos": ["othertodo1", "othertodo2", "othertodo3"],
       "tips": ["othertip1", "othertip2", "othertip3"],
-      "question1": "oQuestion1",
-      "answer1": "answer1",
-      "question2": "Question2",
-      "answer2": "answer2",
-      "question3": "Question3",
-      "answer3": "answer3"
+      "questions": ["question1", "question2", "question3"],
+      "answers": ["oanswer1", "oanswer2", "oanswer3"]
     }
   ]
 }
