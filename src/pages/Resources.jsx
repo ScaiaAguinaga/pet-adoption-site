@@ -5,20 +5,22 @@ import ChecklistItem from "../components/ChecklistItem";
 import Dropdown from "../components/Dropdown";
 
 const Resources = () => {
-  const [selected, setSelected] = useState("Dog");
+  const [selected, setSelected] = useState(1);
   return (
     <div className="m-auto w-1/2">
       <h1 className="flex justify-center py-5">Resources</h1>
 
       <h1>{selected}</h1>
 
-      <div className="grid max-w-min grid-flow-col grid-rows-1 gap-3 pl-1">
+      {/* Creates labels for each pet type */}
+      {/* Dynamically adds styling to show which type is currently selected */}
+      <div className="grid w-min grid-flow-col grid-rows-1 gap-3 pl-1">
         {petTypes.map((animal) => (
           <button key={animal.id}>
             <h2
-              onClick={() => setSelected(animal.type)}
+              onClick={() => setSelected(animal.id)}
               className={`flex justify-center rounded-t-[20px] border-b-transparent px-6 ring-4 ring-cerulean ${
-                selected === animal.type ? "bg-cerulean text-offwhite" : ""
+                selected === animal.id ? "bg-cerulean text-offwhite" : ""
               }`}
             >
               {animal.type}
@@ -31,11 +33,13 @@ const Resources = () => {
         <section className="mb-5">
           <h1 className="font-medium">Checklist</h1>
           <div>
-            <ChecklistItem itemName="To-Do 1" />
-            <ChecklistItem itemName="To-Do 2" />
-            <ChecklistItem itemName="To-Do 3" />
-            <ChecklistItem itemName="To-Do 4" />
-            <ChecklistItem itemName="To-Do 5" />
+            {/* Render checklist for selected pet type */}
+            {/* Map todo array using index of array as unique identifier for array items */}
+            {petTypes
+              .find((animal) => animal.id === selected)
+              ?.todos.map((todo, index) => (
+                <ChecklistItem key={index} itemName={todo} />
+              ))}
           </div>
         </section>
         <section className="mb-5">
