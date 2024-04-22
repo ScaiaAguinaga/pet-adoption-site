@@ -17,7 +17,7 @@ import Coco2 from "../assets/images/Coco2.jpg";
 import Coco3 from "../assets/images/Coco3.jpg";
 import Tiger1 from "../assets/images/Tiger1.jpg";
 import Tiger2 from "../assets/images/Tiger2.jpg";
-import Tiger3 from "../assets/images/Tiger2.jpg";
+import Tiger3 from "../assets/images/Tiger3.jpg";
 
 // image arrays for new pals section
 const SlidesNeo = [Neo1, Neo2, Neo3];

@@ -1,28 +1,30 @@
 import "../styles.css";
+import { petTypes } from "../data/resourcesPetTypes.json";
+import { useState } from "react";
 import ChecklistItem from "../components/ChecklistItem";
 import Dropdown from "../components/Dropdown";
 
 const Resources = () => {
+  const [selected, setSelected] = useState("Dog");
   return (
     <div className="m-auto w-1/2">
       <h1 className="flex justify-center py-5">Resources</h1>
 
+      <h1>{selected}</h1>
+
       <div className="grid max-w-min grid-flow-col grid-rows-1 gap-3 pl-1">
-        <button>
-          <h2 className="flex justify-center rounded-t-[20px] border-b-transparent bg-cerulean px-6 text-offwhite ring-4 ring-cerulean">
-            Dog
-          </h2>
-        </button>
-        <button>
-          <h2 className="flex justify-center rounded-t-[20px] border-b-transparent px-6 ring-4 ring-cerulean hover:text-cerulean">
-            Cat
-          </h2>
-        </button>
-        <button>
-          <h2 className="flex justify-center rounded-t-[20px] border-b-transparent px-6 ring-4 ring-cerulean">
-            Other
-          </h2>
-        </button>
+        {petTypes.map((animal) => (
+          <button key={animal.id}>
+            <h2
+              onClick={() => setSelected(animal.type)}
+              className={`flex justify-center rounded-t-[20px] border-b-transparent px-6 ring-4 ring-cerulean ${
+                selected === animal.type ? "bg-cerulean text-offwhite" : ""
+              }`}
+            >
+              {animal.type}
+            </h2>
+          </button>
+        ))}
       </div>
 
       <div className="rounded-b-[20px] rounded-r-[20px] border-4 border-cerulean p-6 pt-3">
