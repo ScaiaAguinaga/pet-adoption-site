@@ -3,26 +3,13 @@ import HeroButton from "../components/HeroButton";
 import ResourceButton from "../components/ResourceButton";
 import NewPalsCarousel from "../components/NewPalsCarousel";
 
-// asset imports
+// Data imports
+import { pets } from "../data/petData.json";
+
+// Asset imports
 import Checklist from "../assets/images/Checklist.png";
 import DogBath from "../assets/images/DogBath.png";
 import Conversation from "../assets/images/Conversation.png";
-
-// temp imports
-import Neo1 from "../assets/images/Neo1.jpg";
-import Neo2 from "../assets/images/Neo2.jpg";
-import Neo3 from "../assets/images/Neo3.jpg";
-import Coco1 from "../assets/images/Coco1.jpg";
-import Coco2 from "../assets/images/Coco2.jpg";
-import Coco3 from "../assets/images/Coco3.jpg";
-import Tiger1 from "../assets/images/Tiger1.jpg";
-import Tiger2 from "../assets/images/Tiger2.jpg";
-import Tiger3 from "../assets/images/Tiger3.jpg";
-
-// image arrays for new pals section
-const SlidesNeo = [Neo1, Neo2, Neo3];
-const SlidesCoco = [Coco1, Coco2, Coco3];
-const SlidesTiger = [Tiger1, Tiger2, Tiger3];
 
 const Home = () => {
   return (
@@ -50,9 +37,13 @@ const Home = () => {
       <section className="mb-40">
         <h1 className="mb-4 flex justify-center">New Arrivals!</h1>
         <div className="m-auto grid w-[1000px] grid-cols-3 gap-5">
-          <NewPalsCarousel slides={SlidesNeo} petName={"Neo"} />
-          <NewPalsCarousel slides={SlidesCoco} petName={"Coco"} />
-          <NewPalsCarousel slides={SlidesTiger} petName={"Tiger"} />
+          {pets
+            .filter((petID) => petID.id < 4)
+            .map((pet) => (
+              <div key={pet.id}>
+                <NewPalsCarousel slides={pet.images} petName={pet.name} />
+              </div>
+            ))}
         </div>
       </section>
 
@@ -75,13 +66,13 @@ const Home = () => {
           <p>
             At Neo&apos;s Nook, our goal is to create a paw-sitive platform
             where furry friends in need of a loving home can connect with
-            compassionate owners ready to open their hearts and homes. We
-            believe every wag, purr, and chirp tells a unique story, and
-            it&apos;s our mission to match each pet with their perfect match,
-            creating tales of forever companionship. With Neo&apos;s Nook,
-            finding your fur-ever friend has never been easier or more
-            delightful - because every pet deserves a loving home, and every
-            home deserves a pet to make life paw-some!
+            compassionate owners ready to open their hearts. We believe every
+            wag, purr, and chirp tells a unique story, and it&apos;s our mission
+            to match each pet with their perfect match, creating tales of
+            forever companionship. With Neo&apos;s Nook, finding your fur-ever
+            friend has never been easier or more delightful - because every pet
+            deserves a loving home, and every home deserves a pet to make life
+            paw-some!
           </p>
         </div>
       </section>

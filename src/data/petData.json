@@ -1,0 +1,89 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Neo",
+      "species": "Cat",
+      "breed": "N/A",
+      "color": "Orange",
+      "otherColors": ["white"],
+      "age": "2",
+      "DoB": "11/16/2022",
+      "gender": "Male",
+      "images": [
+        "/src/assets/images/Neo1.jpg",
+        "/src/assets/images/Neo2.jpg",
+        "/src/assets/images/Neo3.jpg"
+      ],
+      "blurb": "Neo is named Neo!!!"
+    },
+    {
+      "id": 2,
+      "name": "Lexi",
+      "species": "Dog",
+      "breed": "Labrador Retriever",
+      "color": "Blonde",
+      "otherColors": [],
+      "age": "7",
+      "DoB": "10/07/2017",
+      "gender": "Female",
+      "images": [
+        "/src/assets/images/Lexi1.jpg",
+        "/src/assets/images/Lexi2.jpg",
+        "/src/assets/images/Lexi3.jpg"
+      ],
+      "blurb": "Lexi is named Lexi!!!"
+    },
+    {
+      "id": 3,
+      "name": "Tiger",
+      "species": "Cat",
+      "breed": "Shorthair",
+      "color": "Tan",
+      "otherColors": ["black", "brown"],
+      "age": "4",
+      "DoB": "05/07/2020",
+      "gender": "Female",
+      "images": [
+        "/src/assets/images/Tiger1.jpg",
+        "/src/assets/images/Tiger2.jpg",
+        "/src/assets/images/Tiger3.jpg"
+      ],
+      "blurb": "Tiger is named Tiger!!!"
+    },
+    {
+      "id": 4,
+      "name": "Coco",
+      "species": "Dog",
+      "breed": "Doberman",
+      "color": "Brown",
+      "otherColors": ["Black"],
+      "age": "3",
+      "DoB": "07/04/2021",
+      "gender": "Female",
+      "images": [
+        "/src/assets/images/Coco1.jpg",
+        "/src/assets/images/Coco2.jpg",
+        "/src/assets/images/Coco3.jpg"
+      ],
+      "blurb": "Coco is named Coco!!!"
+    },
+    {
+      "id": 5,
+      "name": "Charlie",
+      "species": "Cat",
+      "breed": "Shorthair",
+      "color": "Gray",
+      "otherColors": [],
+      "age": "4",
+      "DoB": "05/07/2020",
+      "gender": "Male",
+      "images": [
+        "/src/assets/images/Charlie1.jpg",
+        "/src/assets/images/Charlie2.jpg",
+        "/src/assets/images/Charlie3.jpg"
+      ],
+      "blurb": "Charlie is named Charlie!!!"
+    }
+  ]
+}
