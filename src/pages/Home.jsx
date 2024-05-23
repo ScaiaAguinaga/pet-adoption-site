@@ -26,10 +26,10 @@ const Home = () => {
         </div>
         {/* Main page buttons */}
         <div className="flex h-4 justify-center bg-cerulean">
-          <HeroButton to="/Test" name="Adopt" />
-          <HeroButton to="/Test" name="Rehome" />
-          <HeroButton to="/Test" name="Volunteer" />
-          <HeroButton to="/Test" name="Contact" />
+          <HeroButton to="/Adopt" name="Adopt" />
+          <HeroButton to="/Rehome" name="Rehome" />
+          <HeroButton to="/Volunteer" name="Volunteer" />
+          <HeroButton to="/Contact" name="Contact" />
         </div>
       </section>
 
