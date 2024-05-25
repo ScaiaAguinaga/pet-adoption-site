@@ -1,6 +1,6 @@
 const AdoptionCardExpanded = () => {
   return (
-    <div>AdoptionCardExpanded</div>
+    <div className="hidden">AdoptionCardExpanded</div>
   )
 }
 
