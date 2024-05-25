@@ -1,6 +1,6 @@
 import Carousel from "./Carousel";
  
-const NewPalsCarousel = ({ slides, petName }) => {
+const NewPalsCarousel = ({slides, petName }) => {
   return (
     <div>
       <div className="overflow-hidden rounded-t-[20px]">
